@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Amazon Clone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+
+        a {
+            text-decoration: none;
+            color: #2874f0;
+        }
+
+       .header {
+    background-color: #131921;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.header-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+                .header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header-right a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 10px;
+}
+.logo {
+    background-image: url("https://zeevector.com/wp-content/uploads/LOGO/Amazon-India-Logo-PNG-White.png");
+background-size: contain; 
+background-repeat: no-repeat;
+width: 150px; 
+height: 50px; 
+margin-top: 10px;
+}
+.search-bar {
+    display: flex;
+    width: 95%;
+    max-width: 800px;
+}
+.search-bar input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+.search-bar button {
+    padding: 10px;
+    background-color: #febd69;
+    border: none;
+    border-radius: 0 4px 4px 0;
+}
+
+        .navbar {
+            background-color: #fff;
+            padding: 10px 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .navbar ul li {
+            margin: 0 15px;
+        }
+        .main-banner{
+            background: url('https://th-i.thgim.com/public/incoming/qisijl/article66587570.ece/alternates/FREE_1200/Image%201.jpg');
+            background-size: cover;
+            height: 800px;
+            width: 1510px;
+            margin-top: 10px;
+        }
+
+        .main-content {
+            padding: 20px;
+        }
+
+        .products-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: space-around;
+        }
+
+        .product-card {
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 200px;
+        }
+
+        .product-card img {
+            max-width: 100%;
+            border-radius: 5px;
+        }
+
+        .product-card h3 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .product-card .price {
+            color: #388e3c;
+            font-weight: bold;
+        }
+
+        .footer {
+            background-color: #f1f1f1;
+            padding: 20px 0;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .footer-links {
+            width: 30%;
+            text-align: left;
+            padding: 0 20px;
+        }
+
+        .footer-links h3 {
+            margin-top: 0;
+        }
+
+        .footer-links ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+        background-color: #131921;
+        color: #fff;
+        padding: 10px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+        .footer-links ul li {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/webfonts/fa-brands-400.ttf" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+        <div class="header-container">
+            <div class="logo">
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products, brands and more" id="searchInput">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="header-right">
+                <a href="#"><i class="fa-solid fa-user"></i>  Login</a>
+                <a href="#">Orders</a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i>  Cart</a>
+            </div>
+        </div>
+    </header>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#">All</a></li>
+            <li><a href="#">Today's Deal</a></li>
+            <li><a href="#">Amazon miniTV</a></li>
+            <li><a href="#">Sell</a></li>
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">Mobiles</a></li>
+            <li><a href="#">Appliances</a></li>
+            <li><a href="#">Grocery</a></li>
+            <li><a href="#">Home&Furniture</a></li>
+            <li><a href="#">Electronics</a></li>
+            <li><a href="#">Fashion</a></li>
+        </ul>
+    </nav>
+    <div class="main-banner"></div>
+    <main class="main-content">
+        <div class="products-container">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcR4JT_xLNa16xmaciY04ztzcRnB0AklD18NwECHaEUWaY06j69BCxRkwE3iJcFEx78Gw_dACFsV7bqDuMfB-73lasO-rz4e4g6kEv6sY8uUlzITk1OoenP6&usqp=CAE" alt="Product 1">
+                <h3>Phone Case</h3>
+                <p class="price">₹249</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <!-- Product 2 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTecEInTKAbzZUJntGvCSZLsExHum31ht_b_DCM4_YHfGma7jVgRvp0JD3MlEIXuBMGjP4hXQWv4cA6LcC4cU0pI9QUvUZDu6LBm7f8chkx4VEY2qic4p_SVg&usqp=CAE" alt="Product 2">
+                <h3>Laptops</h3>
+                <p class="price">₹38,990</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQKQGcVB-4yrkqxyi8_6DM-5IxnLfENPCfMsC4OycNFQHz5kYcWaz--r-_9o1dURiepm9A_IMNW9Sj3WFpLHrDz0UhDnMwGKPRUxhXpKn5SiNizQUkYWcyl&usqp=CAE" alt="Product 3">
+                <h3>Bedsheets</h3>
+                <p class="price">₹499</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <img src=" https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTWpS3Oqq3FmCmue31LBk2wZ-kMrPURVUDSzzd8JLqNZNwuUZ9a-dvCb-GMspTe9SuV-1NN_wbaPfsML3nPzq48GtXPTjkUr6YPTGatRqOi&usqp=CAE" alt="Product 4">
+                <h3>Carpets</h3>
+                <p class="price">₹357</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <!-- Product 5 -->
+            <div class="product-card">
+                <img src="https://m.media-amazon.com/images/I/61dB9Pwh6TL._SX679_.jpg " alt="Product5">
+                <h3>Tops for Women</h3>
+                <p class="price">₹499</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <!-- Product 6 -->
+            <div class="product-card">
+                <img src=" https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSl5fTQ7SbcBSAi_FXdWDm3ITYcjYXXv_Xj4Gd2sv3XDvjd19E7hItW_LfIJo08gxdm119CNg4G8P1-Jh778LHZKZi39IZlhFbKgLku4eI&usqp=CAE" alt="Product 6">
+                <h3> Camera</h3>
+                <p class="price">₹34,990</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <!-- Product 7 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcS1x3_N0o37rZiVbyXMxKitz_C_gEpXk0jWYNEFoZqdVrm5mm3HwJJ9NQZVD66wWAEyFZSfVr-UnXQx9DWttax2mhpvRhOFDRkAzfJSQKOoppmr8y5gtLbM&usqp=CAE" alt="Product 7">
+                <h3>Window curtains</h3>
+                <p class="price">₹450</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <!-- Product 8 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRQmyj24TAGN2ibCfa2YppJ9SLz7zUyM-bWIYxCfCstecpqSR68iDcVqG0ZCrlNJRfr3KaTVSa-egyLHv2wIKM_4qTL_3T7OXELpzQkfjIQ6d0365NeARTz&usqp=CAE" alt="Product 8">
+                <h3>Chains</h3>
+                <p class="price">₹145</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <!-- Product 9 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTk55cO6rnUZ9zKGKdFg8lU7m5zvcintQB3uDcdsYXZ6ENK24naSRxeEoZRPx4YBAuVyZ2Zes_bqULJ_9-KRmMDD-OKdLsGzmQgc4cVzJtL&usqp=CAE" alt="Product 9">
+                <h3>Hair Bands</h3>
+                <p class="price">₹139</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <!-- Product 10 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcRvTXa1M1uh1iTqlriHlaKrRg3bEIzL_-PeseIXGopu5XxNv0llmJXUgkXyoryo-nnVknblVSfDUMFjEM9WnFHZXGr6wngTiEhiXROXBe3dhfSM1o4O3dqO_g&usqp=CAE" alt="Product 10">
+                <h3>Boxes </h3>
+                <p class="price">₹450</p>
+                <button>Add to Cart</button>
+            </div>
+            
+            <!-- Product 11 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTEXQMzQpdwewCix6MZ1xQddwYjKQo-R2F20XBRf8EY-hJCcc3JgckUglWplG-46DtRaMS2FeV6P97hCflfcaYPRHg8T9IExwN9qfT6fsh7O95bGj_lUX4yBA&usqp=CAE" alt="Product 11">
+                <h3>NoteBooks</h3>
+                <p class="price">₹165</p>
+                <button>Add to Cart</button>
+            </div>
+
+            <!-- Product 12 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcTk5RSvrrYsXvgt2xIJZj9bfAEvNiUQ7PMcaq5Z3F-jrPbCuxYiTfjOilK31lKarafi2u3A4yIUwUlnDexhGN27PC4o1m0fqVbdoc7OGJ_6xAVw421ObqJh&usqp=CAE" alt="Product 12">
+                <h3>Tourist Bags</h3>
+                <p class="price">₹9198</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Product 13 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSrl8KPBohDPTpxZOrTwXjcC7qwhKD0vMuSoxDw3tHc9oPRXktpD5F-wFLnCYX6Kj5xEKd1_gJvKRqJ116mYY_Hzc-nCek1OEHcVdMnAodYbNXi0_Hgo2R_&usqp=CAE  " alt="Product 13">
+                <h3>Priority Women Floral Print Backpack with Adjustable Strap For Women  </h3>
+                <p class="price">₹600  </p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Product 14 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRMsbLDaoJ-QVNAsJjW0uVvEUvmYR7R-WLktkGs4NCC_hkHkmdIgNl8R6NZybaPmhlOrU2UDtXOQkOXd-1KOdnEpQIw47Rh_P6KyR57xL7foeO3BphJ4EDyRg&usqp=CAE " alt="Product 12">
+                <h3>Redmi Note 13 5G (Arctic White, 6GB RAM, 128GB Storage) </h3>
+                <p class="price">₹16,499 </p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Product 15 -->
+            <div class="product-card">
+                <img src="https://krishaz.com/cdn/shop/files/2M4A3496_720x.jpg?v=1715149950" alt="Product 15">
+                <h3>Reha Jhumki Earrings </h3>
+                <p class="price">₹498 </p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Product 16 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSMtMMkLl6ZK43yApiU7qIFQzY80zEBpBMwIgfPZRK_sY4ANDcIarnHXk3YnBG39eT9wafM1jVaucRjgHd6wz59x-LLh6yB7Znx9wUZolfMxj7jhC5VRPQuaA&usqp=CAE " alt="Product 16">
+                <h3> Sonata Analog Watch - For Men </h3>
+                <p class="price">₹400 </p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Product 17 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcThWYXqEAMEUbN4632hgvzdorNxYgFbj00Doq_iU6qUMIoEVszTZY4DfG9MHz4W-fQamcMa0yK-HH79Nxxn1g-sAkO2HlRwWcglUHqbWby1oD4taU0O8tJhhg&usqp=CAE " alt="Product 17">
+                <h3>AHIKA Women Mauve Printed Kurta with Palazzos (M) </h3>
+                <p class="price">₹999 </p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Product 18 -->
+            <div class="product-card">
+                <img src="https://filohevis.com/cdn/shop/files/6_3.jpg?v=1724230203&width=1000 " alt="Product 18">
+                <h3>Men's Formal Regular Fit Full Sleeve Shirt - Pista Green </h3>
+                <p class="price">₹799 </p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Product 19 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcTj9VJZoqEwBwURwLQ0wnbc82gfgEKEy8vaxkH_Epgrr9rv4t84uNI81kTiFY5OxFUegNHSrZ22p-O8l8rDl144J0XfVFXKVTGkE3-z5kbc&usqp=CAE " alt="Product 19">
+                <h3>The Roadster Lifestyle Co. Women Textured Sports Sandals (5) </h3>
+                <p class="price">₹300 </p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Product 20 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcR3LgLbWF-rCWw0-DzS5C6ltLJq5KxXyRJP0lr6jTCfdulNWOSrZROPTQJab--VdiM0NUVKokEzIs5y8Ml8-TZWwwzz1nItOIg9GcOYfojDavgiVYY3eHV3NyU&usqp=CAE " alt="Product 20">
+                <h3>Samsung 28 L Convection Microwave Oven </h3>
+                <p class="price">₹12,990 </p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Product 21 -->
+            <div class="product-card">
+                <img src="https://deals999.in/cdn/shop/files/PhilipshairdryerHP800.webp?v=1713359116&width=600 " alt="Product 21">
+                <h3>Philips HP8100/46 SalonDry ThermoProtect 1000W Compact Hair Dryer - Purple </h3>
+                <p class="price">₹1,015 </p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Product 22 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcQGBpE2ET0KrROy1Z_HXcaZSazj-Fcqqp0rX4h89n7ig0BBcj0nVcolcGRmz6Ap7RugvXhPINCudbb8rGVs9aPATEIQfHkiim4BWfvk5bcb&usqp=CAE " alt="Product 22">
+                <h3>RASVRITI Woven Design Zari Pure Silk Kanjeevaram Saree  </h3>
+                <p class="price">₹1,049 </p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Product 23 -->
+            <div class="product-card">
+                <img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSN7MoNQGNS2lHKX4c4UcwzRY4uHevD31mGsqKMu3UYrrAKbWezLm-VVr34I0vN8K1NPmwwjfS2b5XBTWax18gdvJGFVBXJ9P2ROaanmdFEvy2duViqpcxt&usqp=CAE " alt="Product 23">
+                <h3>Pigeon Joy 1.0 SDX 1-Litre 400-Watt Rice Cooker (Red) </h3>
+                <p class="price">₹1,299 </p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Product 24 -->
+            <div class="product-card">
+                <img src="https://images.snapmint.com/product_assets/images/000/881/394/large/open-uri20230513-3444-9uu6it?1683975264 " alt="Product 24">
+                <h3>Boat Airdopes 183 Wireless Bluetooth Earbuds With 10Mm Driver </h3>
+                <p class="price">₹1,159 </p>
+                <button>Add to Cart</button>
+            </div>
+            </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Our Story</a></li>
+                    <li><a href="#">Mission & Vision</a></li>
+                    <li><a href="#">Leadership Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><a href="#">Customer Support</a></li>
+                    <li><a href="#">Feedback</a></li>
+                    <li><a href="#">Live Chat</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h3>Careers</h3>
+                <ul>
+                    <li><a href="#">Job Openings</a></li>
+                    <li><a href="#">Internships</a></li>
+                    <li><a href="#">Work Culture</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
